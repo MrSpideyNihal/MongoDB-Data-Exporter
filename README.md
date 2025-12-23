@@ -26,7 +26,7 @@ A modern web application to export MongoDB data as JSON files. Built with server
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Rohitbhise0004/MongoDB-Data-Exporter.git
    cd MongoDB-Data-Exporter
    ```
 

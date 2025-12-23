@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Export MongoDB data as JSON files easily">
+  <title>MongoDB Data Exporter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>MongoDB Data Exporter</h1>
+      <p class="subtitle">Export your MongoDB data as JSON with ease</p>
+    </header>
+
+    <!-- Connection Section -->
+    <section class="connection-section">
+      <div class="glass-card">
+        <h2 class="section-title">Connect to MongoDB</h2>
+        
+        <div id="statusMessage"></div>
+        
+        <div class="form-group">
+          <label for="mongoUrl">MongoDB Connection URL</label>
+          <input 
+            type="url" 
+            id="mongoUrl" 
+            placeholder="mongodb://username:password@host:port/database"
+            autocomplete="off"
+          >
+        </div>
+        
+        <button id="connectBtn" class="btn btn-primary">
+          <span id="connectBtnText">Connect</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Database Browser -->
+    <section id="databaseBrowser" class="database-browser">
+      <div class="glass-card">
+        <h2 class="section-title">Select Database</h2>
+        <div id="databaseGrid" class="database-grid"></div>
+      </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collectionsSection" class="collections-section">
+      <div class="glass-card">
+        <div class="collections-header">
+          <h2 class="section-title">Collections</h2>
+          <div class="collection-actions">
+            <button id="selectAllBtn" class="btn btn-secondary">Select All</button>
+            <button id="deselectAllBtn" class="btn btn-secondary">Deselect All</button>
+            <button id="exportSelectedBtn" class="btn btn-success">
+              Export Selected
+            </button>
+            <button id="exportAllBtn" class="btn btn-success">
+              Export All
+            </button>
+          </div>
+        </div>
+        <div id="collectionsList" class="collections-list"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

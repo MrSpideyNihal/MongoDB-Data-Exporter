@@ -1,0 +1,25 @@
+{
+  "name": "mongodb-data-exporter",
+  "version": "1.0.0",
+  "description": "Web application to export MongoDB data as JSON files",
+  "main": "index.js",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build step required'",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [
+    "mongodb",
+    "export",
+    "json",
+    "netlify"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^6.3.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}
